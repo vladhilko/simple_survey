@@ -1,4 +1,6 @@
-puts "Seeding 20 surveys with random responses..."
+# frozen_string_literal: true
+
+puts 'Seeding 20 surveys with random responses...'
 
 questions = [
   'Do you like working remotely?',
@@ -37,4 +39,4 @@ questions.each do |question|
   puts "Created survey with question: '#{question}' and #{num_responses} responses."
 end
 
-puts "Seeding completed successfully!"
+puts 'Seeding completed successfully!'

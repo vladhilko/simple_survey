@@ -243,3 +243,7 @@ Rails/AddColumnIndex:
 
 Rails/FreezeTime:
   Enabled: true
+
+Rails/Output:
+  Exclude:
+    - 'db/seeds.rb'
