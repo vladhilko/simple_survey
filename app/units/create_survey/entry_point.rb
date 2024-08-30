@@ -7,8 +7,6 @@ module CreateSurvey
       new(params: params).call
     end
 
-    attr_reader :form
-
     def initialize(params:)
       @form = Forms::Survey.new(params)
     end
@@ -20,6 +18,10 @@ module CreateSurvey
         SurveyResult.create!(survey: survey)
       end
     end
+
+    private
+
+    attr_reader :form
 
   end
 end
