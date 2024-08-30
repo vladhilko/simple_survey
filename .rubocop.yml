@@ -1,0 +1,245 @@
+inherit_from: .rubocop_todo.yml
+
+require:
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-rspec_rails
+  - rubocop-factory_bot
+
+AllCops:
+  TargetRubyVersion: 3.2
+  Exclude:
+    - "**/scripts/**/**/**/*"
+    - "vendor/**/*"
+    - "**/tmp/**/*"
+    - "**/db/schema.rb"
+    - "**/bin/**/*"
+    - "**/node_modules/**/*"
+
+Layout/LineLength:
+  Enabled: true
+  Max: 120
+  Exclude:
+    - "config/**/*"
+
+Metrics/BlockLength:
+  Exclude:
+    - "config/**/*"
+    - "spec/**/*"
+
+Style/Encoding:
+  Enabled: false
+
+Style/LambdaCall:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/KeywordParametersOrder:
+  Enabled: false
+
+Style/MissingRespondToMissing:
+  Enabled: false
+
+Rails/DynamicFindBy:
+  Enabled: false
+
+Rails/FilePath:
+  EnforcedStyle: arguments
+
+Rails/SkipsModelValidations:
+  Enabled: false
+
+Rails/HasAndBelongsToMany:
+  Enabled: false
+
+Rails/HasManyOrHasOneDependent:
+  Enabled: false
+
+Rails/InverseOf:
+  Enabled: false
+
+Rails/LexicallyScopedActionFilter:
+  Enabled: false
+
+Rails/RakeEnvironment:
+  Enabled: false
+
+Rails/ReversibleMigration:
+  Enabled: false
+
+Rails/NotNullColumn:
+  Enabled: false
+
+Lint/MissingSuper:
+  Enabled: false
+
+Rails/FindById:
+  Enabled: false
+
+Layout/SpaceBeforeBrackets:
+  Enabled: false
+
+Lint/EmptyBlock:
+  Enabled: false
+
+Lint/ToEnumArguments:
+  Enabled: false
+
+Rails/Inquiry:
+  Enabled: false
+
+Gemspec/RequiredRubyVersion:
+  Enabled: false
+
+Layout/EmptyLinesAroundClassBody:
+  Description: Keeps track of empty lines around class bodies.
+  Enabled: true
+  EnforcedStyle: empty_lines
+  SupportedStyles:
+    - empty_lines
+    - no_empty_lines
+
+Lint:
+  Exclude:
+    - "**/db/migrate/**/*.rb"
+
+Layout:
+  Exclude:
+    - "**/db/migrate/**/*.rb"
+
+Style:
+  Exclude:
+    - "**/db/migrate/**/*.rb"
+
+Naming/VariableNumber:
+  EnforcedStyle: snake_case
+
+Metrics/MethodLength:
+  Exclude:
+    - "lib/tasks/**/*.rake"
+    - "**/db/migrate/**/*.rb"
+
+# RSpec
+Layout/MultilineMethodCallIndentation:
+  Include:
+    - "spec/**/*_spec.rb"
+  EnforcedStyle: indented
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/NamedSubject:
+  Enabled: false
+
+RSpec/ExpectInHook:
+  Enabled: false
+
+RSpec/StubbedMock:
+  Enabled: false
+
+RSpec/MessageSpies:
+  Enabled: false
+
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Max: 12
+
+RSpec/FilePath:
+  SpecSuffixOnly: true
+
+RSpec/NestedGroups:
+  Enabled: false
+
+# RSpec styles from new Rubocop Versions
+RSpec/BeNil:
+  Enabled: true
+
+RSpec/ChangeByZero:
+  Enabled: true
+
+RSpec/IdenticalEqualityAssertion:
+  Enabled: true
+
+RSpec/SubjectDeclaration:
+  Enabled: true
+
+RSpec/FactoryBot/SyntaxMethods:
+  Enabled: true
+
+RSpec/Rails/AvoidSetupHook:
+  Enabled: true
+
+RSpec/Rails/HaveHttpStatus:
+  Enabled: true
+
+RSpec/BeEq:
+  Enabled: true
+
+RSpec/ExcessiveDocstringSpacing:
+  Enabled: true
+
+# Styles from new Rubocop Versions
+Rails/NegateInclude:
+  Enabled: true
+
+Gemspec/DeprecatedAttributeAssignment:
+  Enabled: true
+
+Lint/AmbiguousAssignment:
+  Enabled: true
+
+Lint/DuplicateMagicComment:
+  Enabled: true
+
+Lint/NumberedParameterAssignment:
+  Enabled: true
+
+Lint/OrAssignmentToConstant:
+  Enabled: true
+
+Lint/RequireRangeParentheses:
+  Enabled: true
+
+Lint/LambdaWithoutLiteralBlock:
+  Enabled: true
+
+Lint/NoReturnInBeginEndBlocks:
+  Enabled: true
+
+Style/CollectionCompact:
+  Enabled: true
+
+Style/FetchEnvVar:
+  Enabled: true
+
+Style/RedundantInitialize:
+  Enabled: true
+
+Style/MultilineInPatternThen:
+  Enabled: true
+
+Style/NegatedIfElseCondition:
+  Enabled: true
+
+Style/NumberedParameters:
+  Enabled: true
+
+Style/HashSyntax:
+  Enabled: false
+
+# Rails styles from new Rubocop Version
+Rails/WhereMissing:
+  Enabled: true
+
+Rails/MigrationClassName:
+  Enabled: true
+
+Rails/AddColumnIndex:
+  Enabled: true
+
+Rails/FreezeTime:
+  Enabled: true
