@@ -12,8 +12,26 @@
   </head>
 
   <body>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <%= yield %>
+    <main class="bg-gray-50">
+      <div class="min-h-screen flex flex-col">
+        <% if flash[:notice] %>
+          <div class="flex items-center justify-center w-screen">
+            <div class="w-full bg-green-500 py-8 flex justify-center">
+              <h1 class="text-white text-2xl font-semibold text-center"> <%= flash[:notice] %> </h1>
+            </div>
+          </div>
+        <% end %>
+
+        <% if flash[:alert] %>
+          <div class="flex items-center justify-center w-screen">
+            <div class="w-full bg-red-500 py-8 flex justify-center">
+              <h1 class="text-white text-2xl font-semibold text-center"> <%= flash[:alert] %> </h1>
+            </div>
+          </div>
+        <% end %>
+
+        <%= yield %>
+      </div>
     </main>
   </body>
 </html>

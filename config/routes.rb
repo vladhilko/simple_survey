@@ -2,5 +2,5 @@
 
 Rails.application.routes.draw do
   root 'surveys#index'
-  resources :surveys, only: %i[index new]
+  resources :surveys, only: %i[index new create]
 end

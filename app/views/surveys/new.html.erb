@@ -1,1 +1,5 @@
-New
+<div class="bg-gray-50 flex flex-col justify-center items-center min-h-screen p-4 md:p-12">
+  <%= render 'shared/back_button', back_path: surveys_path %>
+
+  <%= render 'surveys/form', form_title: 'Create New Survey', submit_button_text: 'Create Survey' %>
+</div>
