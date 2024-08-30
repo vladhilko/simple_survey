@@ -5,5 +5,7 @@
     <p class="text-gray-500 font-semibold mb-4 inline-flex items-center">
       Responses: <%= survey.survey_result.responses_count %>
     </p>
+
+    <%= link_to 'Start Survey', new_survey_survey_response_path(survey), class: 'w-full border border-gray-300 text-gray-700 py-2 rounded-md hover:bg-gray-100 block text-center mt-4 mt-auto' %>
   </div>
 </div>
