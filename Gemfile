@@ -47,6 +47,7 @@ gem 'bootsnap', require: false
 # gem "image_processing", "~> 1.2"
 
 gem 'chartkick'
+gem 'kaminari'
 gem 'tailwindcss-rails', '~> 2.7'
 
 group :development, :test do

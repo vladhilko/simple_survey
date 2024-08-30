@@ -4,18 +4,18 @@
   <%= form_with model: [survey, survey_response], local: true do |form| %>
     <%= form.hidden_field :answer, value: "" %>
     <div class="flex justify-center mb-12">
-      <label class="inline-flex items-center mr-6">
-        <%= form.radio_button :answer, true, class: 'form-radio text-green-600' %>
+      <label class="inline-flex items-center mr-6 cursor-pointer">
+        <%= form.radio_button :answer, true, class: 'form-radio text-green-600 cursor-pointer' %>
         <span class="ml-2 text-2xl">Yes</span>
       </label>
-      <label class="inline-flex items-center">
-        <%= form.radio_button :answer, false, class: 'form-radio text-red-600' %>
+      <label class="inline-flex items-center cursor-pointer">
+        <%= form.radio_button :answer, false, class: 'form-radio text-red-600 cursor-pointer' %>
         <span class="ml-2 text-2xl">No</span>
       </label>
     </div>
 
     <div class="flex justify-center">
-      <%= form.submit 'Submit', class: 'bg-green-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-green-700 text-2xl' %>
+      <%= form.submit 'Submit', class: 'bg-green-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-green-700 cursor-pointer text-2xl' %>
     </div>
   <% end %>
 </div>

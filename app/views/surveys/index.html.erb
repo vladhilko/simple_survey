@@ -4,4 +4,8 @@
   <div class="flex flex-wrap -mx-4">
     <%= render partial: 'survey_card', collection: @surveys, as: :survey  %>
   </div>
+
+  <div class="mt-4 text-center">
+    <%= paginate @surveys %>
+  </div>
 </div>

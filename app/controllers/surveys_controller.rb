@@ -5,7 +5,7 @@ class SurveysController < ApplicationController
   include RescueErrors
 
   def index
-    @surveys = Survey.all
+    @surveys = Survey.all.includes(:survey_result).page(params[:page]).per(30)
   end
 
   def new
